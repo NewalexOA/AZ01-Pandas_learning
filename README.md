@@ -1,31 +1,58 @@
-# Data Analysis with Pandas
 
-This repository contains a simple script for data analysis using the Pandas library in Python. The script reads salary data from two CSV files and performs basic data exploration and analysis.
+# Salary Data Analysis
+
+This repository contains a simple Python script for analyzing salary data using pandas. The script reads data from two CSV files, performs basic data exploration, and calculates the mean salary for each city.
 
 ## Files
 
-- `salaries.csv`: This file is obtained from [Kaggle.com](https://www.kaggle.com).
-- `dz.csv`: This file is provided as an attachment to an assignment.
+- `salaries.csv`: This file contains salary data downloaded from [Kaggle](https://www.kaggle.com/).
+- `dz.csv`: This file contains additional salary data provided as part of an assignment.
 
-## Script Description
+## Script Overview
 
-The script performs the following steps:
+The script performs the following tasks:
 
-1. Reads the `salaries.csv` file and displays the first 5 rows.
-2. Prints the summary information about the `salaries.csv` DataFrame.
-3. Provides descriptive statistics for the `salaries.csv` DataFrame.
-4. Reads the `dz.csv` file.
-5. Calculates and prints the mean salary for each city from the `dz.csv` file.
+1. Reads the `salaries.csv` file and displays the first 5 rows, basic information, and descriptive statistics.
+2. Reads the `dz.csv` file and calculates the mean salary for each city.
 
+## Usage
 
-## Contact
+1. Make sure you have Python installed on your system.
+2. Install the required library by running:
+    ```bash
+    pip install pandas
+    ```
+3. Place the `salaries.csv` and `dz.csv` files in the same directory as the script.
+4. Run the script:
+    ```bash
+    python script.py
+    ```
 
-For any questions or suggestions, please dont contact me.
+## Code
+
+```python
+import pandas as pd
+
+# Read and explore the Kaggle salary data
+kaggle_df = pd.read_csv('salaries.csv')
+print(kaggle_df.head(5))
+print(kaggle_df.info())
+print(kaggle_df.describe())
+
+# Read and analyze the assignment data
+df = pd.read_csv('dz.csv')
+print(df.groupby('City')['Salary'].mean())
+```
 
 ## Requirements
 
-To run this script, you need to have Python and the Pandas library installed. You can install Pandas using pip:
+- pandas
 
+You can install the required package using:
 ```bash
 pip install pandas
+```
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
