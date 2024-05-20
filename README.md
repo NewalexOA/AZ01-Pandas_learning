@@ -17,9 +17,15 @@ The script performs the following steps:
 4. Reads the `dz.csv` file.
 5. Calculates and prints the mean salary for each city from the `dz.csv` file.
 
+
+## Contact
+
+For any questions or suggestions, please dont contact me.
+
 ## Requirements
 
 To run this script, you need to have Python and the Pandas library installed. You can install Pandas using pip:
 
 ```bash
 pip install pandas
+
